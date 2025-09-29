@@ -1,0 +1,27 @@
+@startuml FiguraGeometricaDiagram
+abstract class FiguraGeometrica {
+    - nome : String
+  
+    + <<abstract>> area() : float
+    + <<abstract>> desenhar() : void
+}
+
+' Classe concreta Retangulo
+class Retangulo {
+    - ladoMaior : int
+    - ladoMenor : int
+}
+
+' Classe concreta Triangulo
+class Triangulo {
+    - ladoA : int
+    - ladoB : int
+    - base   : int
+}
+
+' Relações
+Retangulo --|> FiguraGeometrica : herda\n(Subclasse → Superclasse)
+Triangulo --|> FiguraGeometrica : herda\n(Subclasse → Superclasse)
+
+@enduml
+

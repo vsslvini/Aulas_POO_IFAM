@@ -1,0 +1,29 @@
+@startuml DiagramaPessoaAlunoEndereco
+
+' Classe abstrata Pessoa
+abstract class Pessoa {
+    - nome : String
+    - dataNascimento : Date
+    - idade : int
+}
+
+' Classe concreta Endereco
+class Endereco {
+    - rua : String
+    - numero : int
+    - cep : int
+    - bairro : String
+    - cidade : String
+    - uf : String
+}
+
+' Classe concreta Aluno
+class Aluno {
+    - matricula : int
+}
+
+' Relações
+Aluno --|> Pessoa : herda\n(Subclasse → Superclasse)
+Pessoa --> Endereco : possui
+
+@enduml

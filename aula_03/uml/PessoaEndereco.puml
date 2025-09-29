@@ -1,0 +1,19 @@
+@startuml DiagramaPessoaEndereco
+
+abstract class Pessoa {
+    - nome : String
+    - dataNascimento : Date
+    - idade : int
+}
+
+class Endereco {
+    - rua : String
+    - numero : int
+    - cep : String
+    - bairro : String
+    - cidade : String
+    - uf : String
+}
+
+Pessoa --> Endereco : possui
+@enduml
