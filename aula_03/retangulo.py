@@ -12,12 +12,12 @@ class Retangulo(FiguraGeometrica):
         return self._ladoMaior
 
     @ladoMaior.setter
-    def ladoMaior(self, maiorLado):
-        if isinstance(maiorLado, int) and maiorLado > 0 and maiorLado > self._ladoMenor:
-            self._ladoMaior = maiorLado
+    def ladoMaior(self, value):
+        if isinstance(value, int) and value > 0:
+            self._ladoMaior = value
         else:
             raise ValueError(
-                "O valor do lado maior deve ser um inteiro positivo e MAIOR que o lado MENOR."
+                "O valor do lado maior deve ser um inteiro positivo."
                 )
 
     @property
@@ -25,12 +25,12 @@ class Retangulo(FiguraGeometrica):
         return self._ladoMenor
 
     @ladoMenor.setter
-    def ladoMenor(self, menorLado):
-        if isinstance(menorLado, int) and menorLado > 0 and menorLado < self._ladoMaior:
-            self._ladoMenor = menorLado
+    def ladoMenor(self, value):
+        if isinstance(value, int) and value > 0:
+            self._ladoMenor = value
         else:
             raise ValueError(
-                "O valor do lado menor deve ser um inteiro positivo e MENOR que o lado MAIOR."
+                "O valor do lado menor deve ser um inteiro positivo."
                 )
 
     def __str__(self):

@@ -63,7 +63,7 @@ class Triangulo(FiguraGeometrica):
         return (
             f"****************************************\n"
             f"Figura Geométrica:\n"
-            f"Nome: {self.nome}\n"
+            f"Nome: {super().__str__()}"
             f"Lado A: {self.ladoA}\n"
             f"Lado B: {self.ladoB}\n"
             f"Base  : {self.base}\n"
