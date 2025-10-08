@@ -1,0 +1,47 @@
+A extensão mais popular e completa se chama **PlantUML**, publicada por **Jebbs**.
+
+Ela permite que você:
+
+  * **Visualize o diagrama em tempo real** em uma aba ao lado do seu código.
+  * **Exporte os diagramas** para diversos formatos (PNG, SVG, EPS, etc.).
+  * Tenha **syntax highlighting** (cores) para o código PlantUML.
+  * Utilize snippets para agilizar a escrita do código.
+
+
+### Como Instalar e Configurar (Passo a Passo)
+
+Para funcionar, a extensão precisa de um "motor" para renderizar os diagramas. O mais comum é usar o Java.
+
+**Pré-requisitos:**
+
+1.  **Java Development Kit (JDK):** O PlantUML é um arquivo `.jar`, que requer Java para ser executado. Você precisa ter o JDK (versão 8 ou superior) instalado no seu computador e configurado na variável de ambiente `PATH`.
+2.  **(Opcional, mas Recomendado) Graphviz:** Para alguns tipos de diagrama mais complexos (como `sequence`, `activity`), o PlantUML usa o Graphviz. É uma boa prática instalá-lo também para garantir que tudo funcione.
+
+**Passos para Instalação:**
+
+1.  **Abra o VS Code.**
+2.  Vá para a aba de **Extensões** na barra lateral esquerda (ou pressione `Ctrl+Shift+X`).
+3.  Na barra de busca, digite **`PlantUML`**.
+4.  Procure pela extensão de **Jebbs** (geralmente é a primeira, com milhões de downloads) e clique em **Instalar**.
+
+
+### Como Usar
+
+Depois de instalada, o uso é muito simples:
+
+1.  Crie um arquivo com a extensão `.puml` ou `.plantuml` (ex: `diagrama.puml`).
+2.  Cole ou escreva o seu código PlantUML nesse arquivo.
+3.  Para visualizar o diagrama, use o atalho: **`Alt+D`** (ou `Option+D` no macOS).
+      * Alternativamente, abra a paleta de comandos (`Ctrl+Shift+P`), digite `PlantUML` e selecione a opção **`PlantUML: Preview Current Diagram`**.
+
+Uma nova aba se abrirá ao lado do seu editor, mostrando o diagrama renderizado. O melhor de tudo é que **o diagrama se atualiza automaticamente** à medida que você digita e salva o arquivo\!
+
+### Como Exportar o Diagrama
+
+1.  Com o arquivo do diagrama aberto, abra a paleta de comandos (`Ctrl+Shift+P`).
+2.  Digite `PlantUML` e selecione **`PlantUML: Export Current Diagram`**.
+3.  Ele vai pedir para você escolher o formato de saída (PNG, SVG, etc.). Após a escolha, o arquivo de imagem será salvo na mesma pasta do seu código.
+
+### Solução de Problemas Comuns
+
+Se o preview não aparecer, o problema quase sempre é que a extensão não encontrou a instalação do Java. Verifique se o Java (JDK) está corretamente instalado e se a variável de ambiente `JAVA_HOME` está configurada no seu sistema operacional.

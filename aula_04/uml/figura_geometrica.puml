@@ -1,0 +1,37 @@
+@startuml DiagramaFigurasGeometricas
+
+' Definição da Classe Abstrata, seguindo o estilo do modelo
+abstract class FiguraGeometrica {
+    - nome : String
+    --
+    + <<abstract>> area() : float
+    + <<abstract>> desenhar() : String
+}
+
+' Classe concreta Retangulo, com os atributos do seu código
+class Retangulo {
+    - largura : float
+    - comprimento : float
+    --
+    + area() : float
+    + desenhar() : String
+    + __str__() : String
+}
+
+' Classe concreta Triangulo, com os atributos do seu código
+class Triangulo {
+    - ladoA : float
+    - ladoB : float
+    - base  : float
+    - altura: float
+    --
+    + area() : float
+    + desenhar() : String
+    + __str__() : String
+}
+
+' Relações de Herança, usando a seta --|> do modelo
+Retangulo --|> FiguraGeometrica : herda
+Triangulo --|> FiguraGeometrica : herda
+
+@enduml
